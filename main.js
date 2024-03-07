@@ -8,9 +8,11 @@ function App() {
     }, 1000);
   }, []);
 
-  return React.createElement("h1", null, `Time ${time}`);
-}
+  const div = React.createElement("div", { className: "root2", key: "djdj" });
+  const h1 = React.createElement("h1", { key: "time" }, `Time Is ${time}`);
 
+  return React.createElement("div", null, [div, h1]);
+}
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(React.createElement(App));
